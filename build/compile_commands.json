@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/tbox/project/pi-io-test/gpio/build",
+  "command": "/usr/bin/arm-linux-gnueabihf-gcc   -g -o CMakeFiles/gpio_test.dir/gpio_test.c.o -c /home/tbox/project/pi-io-test/gpio/src/gpio_test.c",
+  "file": "/home/tbox/project/pi-io-test/gpio/src/gpio_test.c"
+}
+]

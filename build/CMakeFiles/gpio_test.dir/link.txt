@@ -1,0 +1,1 @@
+/usr/bin/arm-linux-gnueabihf-gcc -g -rdynamic CMakeFiles/gpio_test.dir/gpio_test.c.o -o gpio_test  -lwiringPi 

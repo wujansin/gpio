@@ -1,0 +1,3 @@
+/home/tbox/project/pi-io-test/gpio/build/CMakeFiles/edit_cache.dir
+/home/tbox/project/pi-io-test/gpio/build/CMakeFiles/rebuild_cache.dir
+/home/tbox/project/pi-io-test/gpio/build/CMakeFiles/gpio_test.dir
