@@ -1,1 +1,6 @@
-#RsapberryPi GPIO C example
+# RsapberryPi GPIO C example
+## WirePi GPIO
+## fork 
+## vfork
+## thread
+## timer

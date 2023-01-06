@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jan  6 16:56:04 2023
+# Make data base, printed on Fri Jan  6 18:25:06 2023
 
 # Variables
 
@@ -63,11 +63,11 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-pwoswI3O0M4b/agent.753
+SSH_AUTH_SOCK = /tmp/ssh-qjP3ob3o4wwh/agent.757
 # default
 .SHELLFLAGS := -c
 # environment
-_LXSESSION_PID = 753
+_LXSESSION_PID = 757
 # environment
 XDG_CONFIG_DIRS = /etc/xdg
 # automatic
@@ -79,7 +79,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9817
+VSCODE_PID = 10430
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -157,7 +157,7 @@ USER = tbox
 # default
 MAKE_VERSION := 4.3
 # environment
-SSH_AGENT_PID = 837
+SSH_AGENT_PID = 843
 # environment
 _ = /usr/share/code/code
 # environment
@@ -201,9 +201,9 @@ GDMSESSION = lightdm-xsession
 
 # Directories
 
-# . (device 45826, inode 514481): 6 files, no impossibilities.
+# . (device 45826, inode 514481): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -253,12 +253,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 114 B / avg = 8 B
-# current buf: size = 8174 B / used = 114 B / count = 14 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 123 B / avg = 8 B
+# current buf: size = 8174 B / used = 123 B / count = 15 / avg = 8 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
-# Finished Make data base on Fri Jan  6 16:56:04 2023
+# Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
+# Finished Make data base on Fri Jan  6 18:25:06 2023
 
  
