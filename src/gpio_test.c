@@ -6,6 +6,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <signal.h>
 
 /*
 RED: Red LED
@@ -26,6 +27,48 @@ BTN: Button
 #define LED_ON(n)	digitalWrite(LED_##n, HIGH)
 #define LED_OFF(n)	digitalWrite(LED_##n, LOW)
 #define BTN_READ(n)	digitalRead(BTN_##n)
+
+/* Global Variable*/
+volatile int g_timer_counter = 0;
+
+
+/***********************************************
+* InitTimer (設定Timer的時距)  					*
+* intv_m_sec: 定時時距		(msec)	 			*
+* start_sec: 開始執行的時間 (sec)				*
+***********************************************/
+int InitTimer(int intv_m_sec, int start_sec)
+{
+	struct itimerval value;
+	//10秒後開始執行，每xxx m sec 執行一次。
+ 	value.it_interval.tv_sec  = 0;
+    value.it_interval.tv_usec = 1000*intv_m_sec; 
+    value.it_value.tv_sec = start_sec;	
+    value.it_value.tv_usec =0;
+
+	//value.it_interval = value.it_value;
+	setitimer(ITIMER_REAL, &value, NULL);
+			
+	return 0;
+}
+/************************************************
+* DoTimerWork (定時(100ms)動作)     			*  
+************************************************/
+int DoTimerWork(int signalnum)
+{
+	g_timer_counter++;
+	if(g_timer_counter>8)
+		LED_ON(YEL);
+	else
+		LED_OFF(YEL);	
+	if(g_timer_counter>9)
+		g_timer_counter = 0;
+
+	/* Exit */
+	signal(SIGALRM, DoTimerWork);
+	return 0;			
+
+}	
 
 int main(void)
 {
@@ -66,6 +109,12 @@ int main(void)
 	{
 		// parent process
 		printf("Parent process\n");
+		/* 每 100 ms (0.1秒)檢查系統狀態 */			
+		if(signal(SIGALRM, DoTimerWork) == SIG_ERR)
+			perror("signal");
+		else
+			InitTimer(100,5);			
+
 		for (;;)
 		{
 			gettimeofday(&tv, NULL);
@@ -76,7 +125,7 @@ int main(void)
 			{
 				// printf("Time :%d.%d LED ON\n", tv.tv_sec,tv.tv_usec);
 				LED_ON(RED);
-				printf("Parent %d\n", i++);
+				printf("Parent %d\n", i++);	
 			}
 			else
 			{

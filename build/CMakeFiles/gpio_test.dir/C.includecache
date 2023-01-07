@@ -17,4 +17,6 @@ sys/time.h
 -
 unistd.h
 -
+signal.h
+-
 

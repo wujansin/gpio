@@ -1,4 +1,4 @@
-# RsapberryPi GPIO C example V0.05
+# RsapberryPi GPIO C example V0.06
 ## Get the Project
 Quick setup — if you’ve done this kind of thing before or	
 https://github.com/wujansin/gpio.git
