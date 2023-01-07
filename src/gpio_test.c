@@ -7,70 +7,84 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-#define LED_RED	5
+/*
+RED: Red LED
+YEL: Yellow LED
+GRN: Green LED
+ON: LED ON
+OFF: LED OFF
+BTN: Button 
+*/
+#define LED_RED 5
 #define LED_YEL 6
-#define BTN		4
+#define LED_GRN 1
+#define BTN_1 	4
 
-int main (void)
+#define BTN_ON	HIGH
+#define BTN_OFF	LOW
+
+#define LED_ON(n)	digitalWrite(LED_##n, HIGH)
+#define LED_OFF(n)	digitalWrite(LED_##n, LOW)
+#define BTN_READ(n)	digitalRead(BTN_##n)
+
+int main(void)
 {
 	int btn_val;
-	int i=0;
+	int i = 0;
 	struct timeval tv;
 	pid_t pid;
-	
-	printf("Build Time %s, %s \n", __TIME__, __DATE__ );
-	
+
+	printf("Build Time %s, %s \n", __TIME__, __DATE__);
+
 	/* Set up GPIO */
-	wiringPiSetup() ;
-	pinMode(BTN, INPUT);
+	wiringPiSetup();
+	pinMode(BTN_1, INPUT);
 	pinMode(LED_RED, OUTPUT);
 	pinMode(LED_YEL, OUTPUT);
+	pinMode(LED_GRN, OUTPUT);
 
-	pid =fork();
-	if(pid <0)
+	pid = fork();
+	if (pid < 0)
 	{
 		perror("fork error");
 	}
-	else if(pid == 0){
-		//child process
+	else if (pid == 0)
+	{
+		// child process
 		printf("Child process\n");
-		for(;;)
-		{			
-			digitalWrite (LED_YEL, HIGH);
+		for (;;)
+		{
+			
+			LED_ON(GRN);
 			delay(500);
-			digitalWrite (LED_YEL, LOW);
-			delay(500);		
-			printf("Child %d\n",i++);
+			LED_OFF(GRN);
+			delay(500);
+			printf("Child %d\n", i++);
 		}
 	}
 	else
 	{
-		//parent process
+		// parent process
 		printf("Parent process\n");
 		for (;;)
 		{
 			gettimeofday(&tv, NULL);
-			
-			btn_val = digitalRead(BTN);
 
-			if(btn_val == HIGH)
+			btn_val = BTN_READ(1);	//digitalRead(BTN);
+
+			if (btn_val == BTN_ON)
 			{
-				digitalWrite (LED_RED, HIGH); 
-				//digitalWrite (LED_YEL, HIGH);
-				//delay (500);
-				//printf("Time :%d.%d LED ON\n", tv.tv_sec,tv.tv_usec);
-				printf("Parent %d\n",i++);
-			}	
+				// printf("Time :%d.%d LED ON\n", tv.tv_sec,tv.tv_usec);
+				LED_ON(RED);
+				printf("Parent %d\n", i++);
+			}
 			else
 			{
-				digitalWrite (LED_RED,  LOW); 
-				//digitalWrite (LED_YEL,  LOW);
-				//delay (500);
-			}	
+				LED_OFF(RED);
+			}
 		}
 	}
-
 	printf("END fork\n");
-	
-	return 0 ;
+
+	return 0;
 }

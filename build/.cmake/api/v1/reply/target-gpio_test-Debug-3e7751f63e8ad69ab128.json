@@ -10,8 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
-			"target_link_libraries"
+			"add_executable"
 		],
 		"files" : 
 		[
@@ -27,12 +26,6 @@
 				"file" : 0,
 				"line" : 3,
 				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 4,
-				"parent" : 0
 			}
 		]
 	},
@@ -42,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g  "
 				}
 			],
 			"language" : "C",
@@ -66,7 +59,6 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 2,
 				"fragment" : "-lwiringPi",
 				"role" : "libraries"
 			}

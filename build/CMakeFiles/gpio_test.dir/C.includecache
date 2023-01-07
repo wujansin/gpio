@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tbox/project/pi-io-test/gpio/src/gpio_test.c
+/home/pi/project/pi-io/gpio/src/gpio_test.c
 stdio.h
 -
 wiringPi.h

@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "gpio_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-gpio_test-Debug-94815a6b74f2321199f9.json",
+					"jsonFile" : "target-gpio_test-Debug-3e7751f63e8ad69ab128.json",
 					"name" : "gpio_test",
 					"projectIndex" : 0
 				}
@@ -48,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/tbox/project/pi-io-test/gpio/build",
-		"source" : "/home/tbox/project/pi-io-test/gpio/src"
+		"build" : "/home/pi/project/pi-io/gpio/build",
+		"source" : "/home/pi/project/pi-io/gpio/src"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 1
+		"minor" : 0
 	}
 }
