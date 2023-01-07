@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for arm-unknown-linux-gnueabihf
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jan  6 18:25:06 2023
+# Make data base, printed on Sat Jan  7 16:40:28 2023
 
 # Variables
 
@@ -63,11 +61,11 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-qjP3ob3o4wwh/agent.757
+SSH_AUTH_SOCK = /tmp/ssh-Jczg2tSzAjk3/agent.872
 # default
 .SHELLFLAGS := -c
 # environment
-_LXSESSION_PID = 757
+_LXSESSION_PID = 872
 # environment
 XDG_CONFIG_DIRS = /etc/xdg
 # automatic
@@ -79,7 +77,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 10430
+VSCODE_PID = 1853
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -97,7 +95,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"a0b772d00248b7f5c117cab9736199be.zh-tw","_translationsConfigFile":"/home/tbox/.config/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/tcf.json","_cacheRoot":"/home/tbox/.config/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw","_resolvedLanguagePackCoreLocation":"/home/tbox/.config/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/e8a3071ea4344d9d48ef8a4df2c097372b0c5161","_corruptedFile":"/home/tbox/.config/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"9e0b6b6ee0edfeeacf3daa2296bae40a.zh-tw","_translationsConfigFile":"/home/tbox/.config/Code/clp/9e0b6b6ee0edfeeacf3daa2296bae40a.zh-tw/tcf.json","_cacheRoot":"/home/tbox/.config/Code/clp/9e0b6b6ee0edfeeacf3daa2296bae40a.zh-tw","_resolvedLanguagePackCoreLocation":"/home/tbox/.config/Code/clp/9e0b6b6ee0edfeeacf3daa2296bae40a.zh-tw/e8a3071ea4344d9d48ef8a4df2c097372b0c5161","_corruptedFile":"/home/tbox/.config/Code/clp/9e0b6b6ee0edfeeacf3daa2296bae40a.zh-tw/corrupted.info","_languagePackSupport":true}
 # default
 MAKE_HOST := arm-unknown-linux-gnueabihf
 # makefile
@@ -157,7 +155,7 @@ USER = tbox
 # default
 MAKE_VERSION := 4.3
 # environment
-SSH_AGENT_PID = 843
+SSH_AGENT_PID = 963
 # environment
 _ = /usr/share/code/code
 # environment
@@ -177,7 +175,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-b8d664b2-1.74.2-main.sock
 # environment
-XDG_SESSION_ID = 1
+XDG_SESSION_ID = 2
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -259,6 +257,8 @@ GNUmakefile:
 # strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Fri Jan  6 18:25:06 2023
+# Finished Make data base on Sat Jan  7 16:40:28 2023
 
  
+make: *** No rule to make target 'all'.  Stop.
+
