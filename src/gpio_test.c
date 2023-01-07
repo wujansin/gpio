@@ -40,7 +40,7 @@ volatile int g_timer_counter = 0;
 int InitTimer(int intv_m_sec, int start_sec)
 {
 	struct itimerval value;
-	//10秒後開始執行，每xxx m sec 執行一次。
+	
  	value.it_interval.tv_sec  = 0;
     value.it_interval.tv_usec = 1000*intv_m_sec; 
     value.it_value.tv_sec = start_sec;	
